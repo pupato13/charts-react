@@ -1,7 +1,7 @@
 import { shade } from "polished";
 import React, { useCallback, useMemo } from "react";
 
-import { HorizontalBar, Bar, Pie } from "react-chartjs-2";
+import { Bar, Pie } from "react-chartjs-2";
 
 import {
     Container,
@@ -81,20 +81,20 @@ const MOJCharts: React.FC = () => {
             labels: branchChartLabels,
             datasets: [
                 {
-                    data: [11, 10, 20, 32, 0],
+                    data: [11, 10, 20, 32, 5],
                     backgroundColor: [
                         "#b2d235",
                         "#36A2EB",
                         "#FFCE56",
-                        "#dedede",
-                        "#237418",
+                        "#dc5b57",
+                        "#4c5d8a",
                     ],
                     hoverBackgroundColor: [
                         shade(0.15, "#b2d235"),
                         shade(0.15, "#36A2EB"),
                         shade(0.15, "#FFCE56"),
-                        shade(0.15, "#dedede"),
-                        shade(0.15, "#237418"),
+                        shade(0.15, "#dc5b57"),
+                        shade(0.15, "#4c5d8a"),
                     ],
                 },
             ],
