@@ -4,40 +4,21 @@ import { FaLongArrowAltUp, FaLongArrowAltDown } from "react-icons/fa";
 
 export const Container = styled.div`
     display: flex;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* width: 100%; */
-    /* flex: 1; */
-    /* margin-top: 16px; */
-
-    /* padding: 16px; */
-
-    flex: 1 1 400px;
-
-    /* @media (min-width: 768px) {
-        flex: 1 1 384px;
-        padding: 16px;
-    } */
-
-    background: red;
+    border: 5px solid #b2d235;
+    width: 100%;
+    flex-wrap: wrap;
 `;
 
 export const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    padding: 24px;
+
+    flex: 1 1 400px;
 `;
 
-export const BoxContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* border-radius: 8px; */
+export const MOJHistoryContent = styled.div`
+    /* padding: 24px;
 
-    /* background: lightblue; */
+    flex: 1 1 400px; */
 `;
 
 export const Title = styled.h1`
@@ -105,29 +86,19 @@ export const IconDown = styled(FaLongArrowAltDown)`
     font-weight: 500;
 `;
 
-export const MobileChartContent = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 480px;
-    background: #fff;
+export const TotalBranchContent = styled.div`
+    /* padding: 24px;
 
-    @media (min-width: 768px) {
-        display: none;
-    }
+    flex: 1 1 400px; */
 `;
 
-export const DesktopChartContent = styled.div`
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - 32px);
-    max-width: 600px;
-    height: 280px;
-    background: #fff;
+export const BranchChartContainer = styled.div`
+    display: flex;
+    width: 100%;
+    padding: 8px;
 
-    @media (min-width: 768px) {
-        display: flex;
+    canvas {
+        width: 100% !important;
+        min-height: 160px;
     }
 `;

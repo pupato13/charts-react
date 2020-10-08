@@ -8,7 +8,7 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: #fefefe;
+    background: #333;
 `;
 
 export const Wrapper = styled.div`
@@ -28,10 +28,12 @@ export const Title = styled.h1`
 
 export const Row = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     width: 100%;
     flex-wrap: wrap;
+
+    background: pink;
 `;
 
 export const MOJWidgets = styled.div`

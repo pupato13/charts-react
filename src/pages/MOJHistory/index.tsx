@@ -4,6 +4,7 @@ import { HorizontalBar, Bar } from "react-chartjs-2";
 
 import {
     Container,
+    Wrapper,
     BoxContent,
     Title,
     Summary,
@@ -49,28 +50,30 @@ const MOJHistory: React.FC = () => {
 
     return (
         <Container>
-            <BoxContent>
-                <Title>MOJ History</Title>
-                <Summary>
-                    <SummaryContent>
-                        <Description>Total</Description>
-                        <Quantity>592</Quantity>
-                    </SummaryContent>
-                    <SummaryContent>
-                        <Description>Avg.</Description>
-                        <Quantity>
-                            <IconDown />
-                            65
-                        </Quantity>
-                    </SummaryContent>
-                    <SummaryContent>
-                        <Description>Last Month</Description>
-                        <Quantity>
-                            <IconUp />
-                            80
-                        </Quantity>
-                    </SummaryContent>
-                </Summary>
+            <Wrapper>
+                <BoxContent>
+                    <Title>MOJ History</Title>
+                    <Summary>
+                        <SummaryContent>
+                            <Description>Total</Description>
+                            <Quantity>592</Quantity>
+                        </SummaryContent>
+                        <SummaryContent>
+                            <Description>Avg.</Description>
+                            <Quantity>
+                                <IconDown />
+                                65
+                            </Quantity>
+                        </SummaryContent>
+                        <SummaryContent>
+                            <Description>Last Month</Description>
+                            <Quantity>
+                                <IconUp />
+                                80
+                            </Quantity>
+                        </SummaryContent>
+                    </Summary>
+                </BoxContent>
                 <MobileChartContent>
                     <HorizontalBar
                         data={data}
@@ -89,7 +92,7 @@ const MOJHistory: React.FC = () => {
                         }}
                     />
                 </DesktopChartContent>
-            </BoxContent>
+            </Wrapper>
         </Container>
     );
 };

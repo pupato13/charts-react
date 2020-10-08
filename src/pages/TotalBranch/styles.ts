@@ -8,13 +8,24 @@ export const Container = styled.div`
     width: 100%;
     background: #fff; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: center;
+    align-items: center; */
+    /* width: 100%; */
+    /* flex: 1; */
+    /* margin-top: 16px; */
+    padding: 16px;
+
+    flex: 1 1 400px;
+
+    background: yellow;
+`;
+
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 16px;
-
-    background: red;
 `;
 
 export const ChartContent = styled.div`
