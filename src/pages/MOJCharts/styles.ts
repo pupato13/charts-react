@@ -102,6 +102,30 @@ export const TotalBranchContent = styled.div`
     flex: 1 1 400px; */
 `;
 
+export const SummaryBranch = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    padding: 8px;
+`;
+
+export const SummaryBranchDescription = styled.div`
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #a6a6a6;
+    white-space: nowrap;
+    margin-right: 16px;
+`;
+
+export const SummaryBranchQuantity = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: 400;
+`;
+
 export const BranchChartContainer = styled.div`
     display: flex;
     width: 100%;

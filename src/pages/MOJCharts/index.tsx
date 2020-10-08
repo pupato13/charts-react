@@ -16,6 +16,9 @@ import {
     IconUp,
     MOJHistoryChartContainer,
     TotalBranchContent,
+    SummaryBranch,
+    SummaryBranchDescription,
+    SummaryBranchQuantity,
     BranchChartContainer,
 } from "./styles";
 
@@ -140,6 +143,12 @@ const MOJCharts: React.FC = () => {
             <Wrapper>
                 <TotalBranchContent>
                     <Title>Branch</Title>
+                    <SummaryBranch>
+                        <SummaryBranchDescription>
+                            Total
+                        </SummaryBranchDescription>
+                        <SummaryBranchQuantity>73</SummaryBranchQuantity>
+                    </SummaryBranch>
                     <BranchChartContainer>
                         <Pie
                             redraw
