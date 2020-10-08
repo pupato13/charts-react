@@ -1,7 +1,7 @@
 import { shade } from "polished";
 import React, { useCallback, useMemo } from "react";
 
-import { Doughnut, Pie } from "react-chartjs-2";
+import { HorizontalBar, Bar, Pie } from "react-chartjs-2";
 
 import {
     Container,
@@ -14,12 +14,13 @@ import {
     Quantity,
     IconDown,
     IconUp,
+    MOJHistoryChartContainer,
     TotalBranchContent,
     BranchChartContainer,
 } from "./styles";
 
 const MOJCharts: React.FC = () => {
-    const labels = useMemo(() => {
+    const branchChartLabels = useMemo(() => {
         return [
             "Auckland 11",
             "Tauranga 10",
@@ -31,16 +32,50 @@ const MOJCharts: React.FC = () => {
 
     const getToolTipByBranch = useCallback(
         (index: number): string => {
-            const splittedText = labels[index].split(" ");
+            const splittedText = branchChartLabels[index].split(" ");
 
             return `${splittedText[0]}: ${splittedText[1]}`;
         },
-        [labels],
+        [branchChartLabels],
     );
+
+    const getMOJHistoryData = useMemo(() => {
+        const data = {
+            labels: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ],
+            datasets: [
+                {
+                    label: "2020",
+                    backgroundColor: "rgba(178,210,53,0.6)",
+                    borderColor: "rgba(178,210,53,1)",
+                    borderWidth: 1,
+                    hoverBackgroundColor: "rgba(146,177,24, 0.8)",
+                    hoverBorderColor: "rgba(146,177,24,1)",
+                    data: [65, 59, 80, 81, 56, 55, 40, 76, 80, 0, 0, 0],
+                    categoryPercentage: 1,
+                    barPercentage: 0.5,
+                },
+            ],
+        };
+
+        return data;
+    }, []);
 
     const getBranchChartData = useMemo(() => {
         const branchsData = {
-            labels,
+            labels: branchChartLabels,
             datasets: [
                 {
                     data: [11, 10, 20, 32, 0],
@@ -63,7 +98,7 @@ const MOJCharts: React.FC = () => {
         };
 
         return branchsData;
-    }, [labels]);
+    }, [branchChartLabels]);
 
     return (
         <Container>
@@ -90,6 +125,16 @@ const MOJCharts: React.FC = () => {
                             </Quantity>
                         </SummaryContent>
                     </Summary>
+                    <MOJHistoryChartContainer>
+                        <Bar
+                            redraw
+                            data={getMOJHistoryData}
+                            options={{
+                                maintainAspectRatio: false,
+                                responsive: true,
+                            }}
+                        />
+                    </MOJHistoryChartContainer>
                 </MOJHistoryContent>
             </Wrapper>
             <Wrapper>
@@ -97,6 +142,7 @@ const MOJCharts: React.FC = () => {
                     <Title>Branch</Title>
                     <BranchChartContainer>
                         <Pie
+                            redraw
                             data={getBranchChartData}
                             options={{
                                 responsive: true,

@@ -86,6 +86,16 @@ export const IconDown = styled(FaLongArrowAltDown)`
     font-weight: 500;
 `;
 
+export const MOJHistoryChartContainer = styled.div`
+    display: flex;
+    width: 100%;
+    padding: 8px;
+
+    canvas {
+        width: 100% !important;
+    }
+`;
+
 export const TotalBranchContent = styled.div`
     /* padding: 24px;
 
