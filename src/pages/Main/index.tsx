@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaAddressBook } from "react-icons/fa";
+import { FcLike } from "react-icons/fc";
 
 import bossLogo from "../../assets/boss-logo.png";
 import bossMiniLogo from "../../assets/boss-logo_min.png";
@@ -23,6 +24,9 @@ import {
     AppContent,
     AppContentInner,
     AppFooter,
+    AppFooterWrapper,
+    AppFooterCompany,
+    AppFooterQuote,
 } from "./styles";
 
 const Main: React.FC = ({ children }) => {
@@ -80,7 +84,17 @@ const Main: React.FC = ({ children }) => {
                 </Sidebar>
                 <AppContent>
                     <AppContentInner>{children}</AppContentInner>
-                    <AppFooter></AppFooter>
+                    <AppFooter>
+                        <AppFooterWrapper>
+                            <AppFooterCompany>
+                                <strong>BOSS Technologies</strong>
+                            </AppFooterCompany>
+                            <AppFooterQuote>
+                                © {new Date().getFullYear()}. Made with{" "}
+                                <FcLike size={18} /> for a better web
+                            </AppFooterQuote>
+                        </AppFooterWrapper>
+                    </AppFooter>
                 </AppContent>
             </AppMain>
         </Container>

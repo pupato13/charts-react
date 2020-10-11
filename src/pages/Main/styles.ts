@@ -263,4 +263,56 @@ export const AppContentInner = styled.div`
     flex: 1 1;
 `;
 
-export const AppFooter = styled.div``;
+export const AppFooter = styled.div`
+    display: block;
+    height: auto;
+    padding: 0.33333rem 0.5rem 0.5rem;
+
+    text-align: center;
+
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    background: #fff;
+    /* font-size: 0.83125rem; */
+
+    border-top: 3px solid #b2d235;
+
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+`;
+
+export const AppFooterWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 0.33333rem 0.5rem 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 500px) {
+        flex-direction: row;
+    }
+`;
+
+export const AppFooterCompany = styled.div``;
+
+export const AppFooterQuote = styled.div`
+    /* margin-bottom: 0.5rem; */
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 0.5rem;
+
+    @media only screen and (min-width: 500px) {
+        margin-top: 0;
+    }
+
+    svg {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+`;
